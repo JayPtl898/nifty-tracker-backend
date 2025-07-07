@@ -13,11 +13,11 @@ app.get('/nifty', async (req, res) => {
       'https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY',
       {
         headers: {
-          'User-Agent':
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
-          'Accept-Language': 'en-US,en;q=0.9',
-          'Referer': 'https://www.nseindia.com',
-        },
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)...',
+  'Accept-Language': 'en-US,en;q=0.9',
+  'Referer': 'https://www.nseindia.com',
+}
+
       }
     );
 
