@@ -15,22 +15,20 @@ app.get('/nifty', async (req, res) => {
         headers: {
           'User-Agent':
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
-          'Accept': '*/*',
           'Accept-Language': 'en-US,en;q=0.9',
-          'Referer': 'https://www.nseindia.com/option-chain',
-          'Connection': 'keep-alive',
-          'X-Requested-With': 'XMLHttpRequest'
-        }
+          'Referer': 'https://www.nseindia.com',
+        },
       }
     );
 
     const data = response.data.records.data;
     res.json(data);
   } catch (error) {
-    console.error('NSE Fetch Error:', error.message);
+    console.error('NSE fetch failed:', error.message);
     res.status(500).json({ error: 'Failed to fetch data from NSE' });
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
